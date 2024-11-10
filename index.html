@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Dashboard || Matias Borda </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Economic Dashboard</h1>
+        </header>
+        <main>
+            <div class="filters">
+                <label for="country">Select country:</label>
+                <select id="country"></select>
+                
+                <label for="indicator">Select an economic indicator:</label>
+                <select id="indicator">
+                    <option value="NY.GDP.MKTP.CD">GDP (Gross Domestic Product)</option>
+                    <option value="FP.CPI.TOTL.ZG">Inflation Rate</option>
+                    <option value="SL.UEM.TOTL.ZS">Unemployment rate</option>
+                    <option value="DT.DOD.DECT.GN.ZS">External debt</option>
+                    <option value="NY.GDP.MKTP.KD.ZG">GDP growth</option>
+                    <option value="SP.DYN.LE00.IN">Life expectancy</option>
+                    <option value="FR.INR.LEND">Loan Interest Rate</option>
+                    <option value="NE.EXP.GNFS.ZS">Exports as % of GDP</option>
+                    <option value="NE.IMP.GNFS.ZS">Imports as % of GDP</option>
+                    <option value="SI.POV.DDAY">Poverty Rate</option>
+                    <option value="EN.ATM.CO2E.PC">CO2 emissions per person</option>
+                    <option value="SP.POP.GROW">Population Growth</option>
+                    <option value="IT.NET.USER.ZS">Internet users</option>
+                </select>
+
+                <button id="fetchData">Show data</button>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+
+            <div class="summary">
+                <h3>Summary of the selected indicator:</h3>
+                <ul id="summary-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
